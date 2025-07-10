@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBI KFS Form - Annex A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+            line-height: 1.2;
+            font-size: 11px;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 10mm;
+        }
+
+        .page {
+            width: 100%;
+            page-break-after: always;
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        .header {
+            text-align: right;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+
+        .form-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            border: 2px solid black;
+        }
+
+        .form-table th,
+        .form-table td {
+            border: 1px solid black;
+            padding: 4px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 10px;
+        }
+
+        .form-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .number-col {
+            width: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .description-col {
+            width: 200px;
+        }
+
+        .input-field {
+            border: none;
+            background: transparent;
+            width: 100%;
+            min-height: 20px;
+        }
+
+        .small-text {
+            font-size: 9px;
+            font-style: italic;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .footnote {
+            font-size: 8px;
+            margin-top: 10px;
+        }
+
+        .section-header {
+            background-color: #e0e0e0;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .sub-row {
+            background-color: #f8f8f8;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .page {
+                page-break-after: always;
+                margin: 0;
+            }
+            
+            .page:last-child {
+                page-break-after: avoid;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Page 1: Annex A - First Page -->
+        <div class="page">
+            <div class="header">Annex A</div>
+            <div class="title">Key Facts Statement</div>
+            <div class="subtitle">Part 1 (Interest rate and fees/charges)</div>
+
+            <!-- Single Comprehensive Table for Part 1 -->
+            <table class="form-table">
+                <!-- Basic Loan Information -->
+                <tr>
+                    <td class="number-col">1</td>
+                    <td class="description-col">Loan proposal/ account No.</td>
+                    <td colspan="3"><input type="text" class="input-field"></td>
+                    <td class="bold">Type of Loan</td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td class="number-col">2</td>
+                    <td class="description-col">Sanctioned Loan amount (in Rupees)</td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                
+                <!-- Disbursal Schedule -->
+                <tr>
+                    <td class="number-col">3</td>
+                    <td class="description-col">Disbursal schedule</td>
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="sub-row">
+                    <td></td>
+                    <td class="small-text">(i) Disbursement in stages or 100% upfront</td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                <tr class="sub-row">
+                    <td></td>
+                    <td class="small-text">(ii) If it is stages wise, mention the clause of loan agreement having relevant details</td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                
+                <!-- Loan Term -->
+                <tr>
+                    <td class="number-col">4</td>
+                    <td class="description-col">Loan term (number of days)</td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                
+                <!-- Instalment Details Header -->
+                <tr>
+                    <td class="number-col">5</td>
+                    <td class="description-col">Instalment details</td>
+                    <td colspan="5"></td>
+                </tr>
+                <tr class="section-header">
+                    <th>Type of instalments</th>
+                    <th>Number of EMIs</th>
+                    <th>EMI (₹)</th>
+                    <th colspan="4">Commencement of repayment, post sanction</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td colspan="4"><input type="text" class="input-field"></td>
+                </tr>
+                
+                <!-- Interest Rate Information -->
+                <tr>
+                    <td class="number-col">6</td>
+                    <td colspan="6" class="bold">Interest rate (%) and type (fixed or floating or hybrid)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="6"><input type="text" class="input-field"></td>
+                </tr>
+                
+                <!-- Floating Rate Details -->
+                <tr>
+                    <td class="number-col">7</td>
+                    <td colspan="6" class="bold">Additional Information in case of Floating rate of interest</td>
+                </tr>
+                <tr class="section-header">
+                    <th>Reference Benchmark</th>
+                    <th>Benchmark rate (%) (B)</th>
+                    <th>Spread (%) (S)</th>
+                    <th>Final rate (%) (R = (B) + (S))</th>
+                    <th>Reset periodicity (Monthly/Quarterly/Semi-annually/Annually)</th>
+                    <th>Impact of 25 bps change in reference benchmark (or 25 bps change in "R", change in "₹")</th>
+                    <th>No. of EMIs</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+                
+                <!-- Fee/Charges Section -->
+                <tr>
+                    <td class="number-col">8</td>
+                    <td colspan="6" class="bold">Fee/ Charges*</td>
+                </tr>
+                <tr class="section-header">
+                    <th rowspan="2"></th>
+                    <th rowspan="2">Type of Charge</th>
+                    <th colspan="2">Payable to the RE (A)</th>
+                    <th colspan="2">Payable to a third party through RE (B)</th>
+                </tr>
+                <tr class="section-header">
+                    <th>One-time/ Amount (in ₹)</th>
+                    <th>Recurring</th>
+                    <th>One-time/Recurring</th>
+                    <th>Amount (in ₹) or Percentage (%) as applicable*</th>
+                </tr>
+                <tr>
+                    <td>(i)</td>
+                    <td>Processing fees</td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(ii)</td>
+                    <td>Insurance charges</td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(iii)</td>
+                    <td>Valuation fees</td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(iv)</td>
+                    <td>Any other (please specify)</td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Page 2: Annex A - Second Page -->
+        <div class="page">
+            <!-- APR Table -->
+            <table class="form-table">
+                <tr>
+                    <td class="number-col">9</td>
+                    <td colspan="5" class="bold">Annual Percentage Rate (APR) (%)*</td>
+                </tr>
+                <tr>
+                    <td class="number-col">10</td>
+                    <td colspan="5" class="bold">Details of Contingent Charges (in ₹ or %, as applicable)</td>
+                </tr>
+            </table>
+
+            <!-- Contingent Charges Details -->
+            <table class="form-table">
+                <tr>
+                    <td>(i)</td>
+                    <td>Penal charges, if any, in case of delayed payment</td>
+                    <td colspan="4"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(ii)</td>
+                    <td>Other penal charges, if any</td>
+                    <td colspan="4"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(iii)</td>
+                    <td>Foreclosure charges, if applicable</td>
+                    <td colspan="4"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(iv)</td>
+                    <td>Charges for switching of loans from floating to fixed rate and vice versa</td>
+                    <td colspan="4"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(v)</td>
+                    <td>Any other charges (please specify)</td>
+                    <td colspan="4"><input type="text" class="input-field"></td>
+                </tr>
+            </table>
+
+            <!-- Part 2 Header -->
+            <div class="section-header" style="margin: 15px 0; padding: 8px;">
+                <strong>Part 2 (Other qualitative information)</strong>
+            </div>
+
+            <!-- Qualitative Information Table -->
+            <table class="form-table">
+                <tr>
+                    <td class="number-col">1</td>
+                    <td colspan="5">Clause of Loan agreement relating to engagement of recovery agents</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><input type="text" class="input-field" style="min-height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td class="number-col">2</td>
+                    <td colspan="5">Clause of Loan agreement which details grievance redressal mechanism</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><input type="text" class="input-field" style="min-height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td class="number-col">3</td>
+                    <td colspan="5">Phone number and email id of the nodal grievance redressal officer*</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td class="number-col">4</td>
+                    <td colspan="5">Whether the loan is, or in future maybe, subject to transfer to other REs or securitisation (Yes/No)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td class="number-col">5</td>
+                    <td colspan="5">In case of lending under collaborative lending arrangements (e.g., co-lending/ outsourcing), following additional details may be furnished:</td>
+                </tr>
+            </table>
+
+            <!-- Collaborative Lending Details -->
+            <table class="form-table">
+                <tr class="section-header">
+                    <th>Name of the originating RE, along with its lending exposure</th>
+                    <th>Name of the partner RE along with its proportion of funding</th>
+                    <th>Blended rate of interest</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                    <td><input type="text" class="input-field"></td>
+                </tr>
+            </table>
+
+            <!-- Digital Loans Section -->
+            <table class="form-table">
+                <tr>
+                    <td class="number-col">6</td>
+                    <td colspan="5">In case of digital loans, following specific disclosures may be furnished:</td>
+                </tr>
+                <tr>
+                    <td>(i)</td>
+                    <td colspan="5">Cooling off/look-up period, in terms of RE's board approved policy, during which borrower shall not be charged any penalty on prepayment of loan</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td>(ii)</td>
+                    <td colspan="5">Details of LSP acting as recovery agent and authorized to approach the borrower</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="5"><input type="text" class="input-field"></td>
+                </tr>
+            </table>
+
+            <!-- Footnotes -->
+            <div class="footnote">
+                <p>* Fixed reset, other than on account of changes in credit profile</p>
+                <p>* Please refer circular "Reset of Floating Interest Rate on Equated Monthly Instalments (EMI) based Personal Loans" dated August 29, 2019</p>
+                <p>* Regulated Entity (RE)</p>
+                <p>* RE may disclose the amount net of any taxes such as GST</p>
+                <p>* Mention frequency, where recurring</p>
+                <p>* Please refer to the illustration in Annex B</p>
+                <p>* RE may furnish generic email id, provided a response is made within 1 working day</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
