@@ -124,6 +124,29 @@
             background-color: #f8f8f8;
         }
 
+        /* Specific column widths for Part 2 table */
+        .part2-table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .part2-table .number-col {
+            width: 30px;
+        }
+
+        .part2-table .question-col {
+            width: 40%;
+        }
+
+        .part2-table .answer-col {
+            width: 55%;
+        }
+
+        /* Equal distribution for collaborative lending section */
+        .part2-table .collab-col {
+            width: 33.33%;
+        }
+
         /* Print styles */
         @media print {
             body {
@@ -350,65 +373,72 @@
             </div>
 
             <!-- Single Comprehensive Table for Part 2 -->
-            <table class="form-table">
+            <table class="form-table part2-table">
                 <!-- Recovery Agents Clause -->
                 <tr>
                     <td class="number-col">1</td>
-                    <td >Clause of Loan agreement relating to engagement of recovery agents</td>
-                    <td colspan="5"><input type="text" class="input-field" style="min-height: 40px;"></td>
+                    <td class="question-col">Clause of Loan agreement relating to engagement of recovery agents</td>
+                    <td class="answer-col"><input type="text" class="input-field" style="min-height: 40px;"></td>
                 </tr>
                 
                 <!-- Grievance Redressal Mechanism -->
                 <tr>
                     <td class="number-col">2</td>
-                    <td colspan="2">Clause of Loan agreement which details grievance redressal mechanism</td>
-                    <td colspan="3"><input type="text" class="input-field" style="min-height: 40px;"></td>
+                    <td class="question-col">Clause of Loan agreement which details grievance redressal mechanism</td>
+                    <td class="answer-col"><input type="text" class="input-field" style="min-height: 40px;"></td>
                 </tr>
                 
                 <!-- Nodal Grievance Officer Contact -->
                 <tr>
                     <td class="number-col">3</td>
-                    <td colspan="2">Phone number and email id of the nodal grievance redressal officer*</td>
-                    <td colspan="3"><input type="text" class="input-field"></td>
+                    <td class="question-col">Phone number and email id of the nodal grievance redressal officer*</td>
+                    <td class="answer-col"><input type="text" class="input-field"></td>
                 </tr>
                 
                 <!-- Loan Transfer/Securitisation -->
                 <tr>
                     <td class="number-col">4</td>
-                    <td colspan="2">Whether the loan is, or in future maybe, subject to transfer to other REs or securitisation (Yes/No)</td>
-                    <td colspan="3"><input type="text" class="input-field"></td>
+                    <td class="question-col">Whether the loan is, or in future maybe, subject to transfer to other REs or securitisation (Yes/No)</td>
+                    <td class="answer-col"><input type="text" class="input-field"></td>
                 </tr>
                 
                 <!-- Collaborative Lending Arrangements -->
                 <tr>
                     <td class="number-col">5</td>
-                    <td colspan="5">In case of lending under collaborative lending arrangements (e.g., co-lending/ outsourcing), following additional details may be furnished:</td>
+                    <td colspan="2">In case of lending under collaborative lending arrangements (e.g., co-lending/ outsourcing), following additional details may be furnished:</td>
                 </tr>
-                <tr class="section-header">
-                    <th>Name of the originating RE, along with its lending exposure</th>
-                    <th>Name of the partner RE along with its proportion of funding</th>
-                    <th colspan="4">Blended rate of interest</th>
-                </tr>
-                <tr>
-                    <td><input type="text" class="input-field"></td>
-                    <td><input type="text" class="input-field"></td>
-                    <td colspan="4"><input type="text" class="input-field"></td>
+                <tr  >
+                    <td colspan="3" style="padding: 0px;">
+                        <!-- Nested table for collaborative lending details -->
+                        <table style="width: 100%; border-collapse: collapse; border: none; padding: 0;">
+                            <tr class="section-header">
+                                <th style="width: 33.33%; border: none; border-bottom: 1px solid black; border-right: 1px solid black; background-color: #e0e0e0;">Name of the originating RE, along with its lending exposure</th>
+                                <th style="width: 33.33%; border: none; border-bottom: 1px solid black; border-right: 1px solid black;  background-color: #e0e0e0;">Name of the partner RE along with its proportion of funding</th>
+                                <th style="width: 33.33%; border: none; border-bottom: 1px solid black; background-color: #e0e0e0;">Blended rate of interest</th>
+                            </tr>
+                            <tr>
+                                <td style="width: 33.33%; border: none; border-right: 1px solid black; "><input type="text" class="input-field"></td>
+                                <td style="width: 33.33%; border: none; border-right: 1px solid black;"><input type="text" class="input-field"></td>
+                                <td style="width: 33.33%; border: none;"><input type="text" class="input-field"></td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 
                 <!-- Digital Loans Section -->
                 <tr>
                     <td class="number-col">6</td>
-                    <td colspan="5">In case of digital loans, following specific disclosures may be furnished:</td>
+                    <td colspan="2">In case of digital loans, following specific disclosures may be furnished:</td>
                 </tr>
                 <tr>
                     <td>(i)</td>
-                    <td colspan="2">Cooling off/look-up period, in terms of RE's board approved policy, during which borrower shall not be charged any penalty on prepayment of loan</td>
-                    <td colspan="3"><input type="text" class="input-field"></td>
+                    <td class="question-col">Cooling off/look-up period, in terms of RE's board approved policy, during which borrower shall not be charged any penalty on prepayment of loan</td>
+                    <td class="answer-col"><input type="text" class="input-field"></td>
                 </tr>
                 <tr>
                     <td>(ii)</td>
-                    <td colspan="2">Details of LSP acting as recovery agent and authorized to approach the borrower</td>
-                    <td colspan="3"><input type="text" class="input-field"></td>
+                    <td class="question-col">Details of LSP acting as recovery agent and authorized to approach the borrower</td>
+                    <td class="answer-col"><input type="text" class="input-field"></td>
                 </tr>
             </table>
 
